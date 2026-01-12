@@ -21,6 +21,6 @@ jobs:
 
       - name: Setup Kubernetes Cluster
         run: |
-          chmod +x scripts/cluster-setup.sh
-          ./scripts/cluster-setup.sh
+          chmod +x script/cluster-setup.sh
+          ./script/cluster-setup.sh
 
