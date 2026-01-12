@@ -13,9 +13,13 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Show Runner Info
+      - name: Install kubectl
         run: |
-          echo "Running on: $(uname -a)"
-          docker --version
-          kubectl version --client || true
+          curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+          chmod +x kubectl
+          sudo mv kubectl /usr/local/bin/
 
+      - name: Setup Kubernetes Cluster
+        run: |
+          chmod +x script/cluster-setup.sh
+          ./script/cluster-setup.sh
