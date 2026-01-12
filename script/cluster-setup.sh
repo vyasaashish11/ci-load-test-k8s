@@ -12,7 +12,7 @@ echo "Deleting existing cluster (if any)..."
 kind delete cluster --name $CLUSTER_NAME || true
 
 echo "Creating Kubernetes cluster with 2 workers..."
-kind create cluster --config k8s/kind-config.yaml --name $CLUSTER_NAME
+kind create cluster --config k8s/kind.config.yaml --name $CLUSTER_NAME
 
 echo "Cluster created"
 
