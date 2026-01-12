@@ -37,3 +37,10 @@ jobs:
           ./script/deploy-apps.sh
 
 
+      - name: Deploy Ingress Rules
+        run: |
+          chmod +x script/deploy-ingress.sh
+          ./script/deploy-ingress.sh
+
+
+
