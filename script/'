@@ -1,9 +1,0 @@
-#!/bin/bash
-set -e
-
-echo "Deploying ingress rules..."
-kubectl apply -f k8s/ingress.yaml
-
-echo "Ingress rules applied"
-kubectl get ingress
-

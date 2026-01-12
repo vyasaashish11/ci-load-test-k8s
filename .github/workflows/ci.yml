@@ -43,4 +43,8 @@ jobs:
           ./script/deploy-ingress.sh
 
 
+      - name: Health Checks
+        run: |
+          chmod +x script/health-check.sh
+          ./script/health-check.sh
 
