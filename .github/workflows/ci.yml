@@ -30,3 +30,10 @@ jobs:
           chmod +x script/install-ingress.sh
           ./script/install-ingress.sh
 
+
+      - name: Deploy Applications
+        run: |
+          chmod +x script/deploy-apps.sh
+          ./script/deploy-apps.sh
+
+
