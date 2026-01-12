@@ -23,3 +23,10 @@ jobs:
         run: |
           chmod +x script/cluster-setup.sh
           ./script/cluster-setup.sh
+
+
+      - name: Install Ingress Controller
+        run: |
+          chmod +x script/install-ingress.sh
+          ./script/install-ingress.sh
+
